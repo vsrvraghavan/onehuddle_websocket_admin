@@ -97,8 +97,7 @@ public class App {
 			game_2_data = data.getContent().getLb2();
 		}else {
 			data.getContent().setLb2(game_2_data);
-		}
-		
+		}		
 		return data;
 	}
 	
