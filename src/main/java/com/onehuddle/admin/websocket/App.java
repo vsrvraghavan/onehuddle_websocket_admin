@@ -44,6 +44,9 @@ public class App {
 	private static List<LeaderData> game_1_data = null;
 	private static List<LeaderData> game_2_data = null;
 	
+	private static List<LeaderData> game_3_data = null;
+	private static List<LeaderData> game_4_data = null;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(App.class, args);
 	}
@@ -97,10 +100,24 @@ public class App {
 			game_2_data = data.getContent().getLb2();
 		}else {
 			data.getContent().setLb2(game_2_data);
-		}		
+		}	
+		
+		if(data.getContent().getLbC() != null) {
+			game_3_data = data.getContent().getLbC();
+		}else {
+			data.getContent().setLbC(game_3_data);
+		}
+		
+		if(data.getContent().getLbD() != null) {
+			game_4_data = data.getContent().getLbD();
+		}else {
+			data.getContent().setLbD(game_4_data);
+		}
+		
+		
 		return data;
 	}
-	
+		
 	@RequestMapping(value="/getpaneldata", method = RequestMethod.GET)
     public AdminPanelMessage getPanelData() {
 		AdminPanelMessage data = new AdminPanelMessage();
@@ -117,6 +134,10 @@ public class App {
 		messageData.setGameSessionsFinishedByTimeout(gameSessionFinishedByTimeout);	
 		messageData.setLb1(game_1_data);
 		messageData.setLb2(game_2_data);
+		
+		messageData.setLbC(game_3_data);
+		messageData.setLbD(game_4_data);
+		
 		data.setContent(messageData);
 		return data;
 		

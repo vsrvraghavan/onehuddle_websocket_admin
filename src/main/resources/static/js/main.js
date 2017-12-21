@@ -158,7 +158,7 @@ function setPanelData(messageObject, messageFor){
 		
 		//.innerHTML = messageObject.leaderDataGame1;
 	}	else{
-		panel5.innerHTML = "&nbsp;";
+		//panel5.innerHTML = "&nbsp;";
 	}
 	
 	if(messageObject.lb2 != null){
@@ -169,7 +169,7 @@ function setPanelData(messageObject, messageFor){
 			panel6.innerHTML += playerRankData;
 		}
 	}	else{
-		panel6.innerHTML = "&nbsp;";
+		//panel6.innerHTML = "&nbsp;";
 	}
 	
 	if(messageObject.lbC != null){
@@ -180,7 +180,7 @@ function setPanelData(messageObject, messageFor){
 			panel7.innerHTML += playerRankData;
 		}
 	}	else{
-		panel7.innerHTML = "&nbsp;";
+		//panel7.innerHTML = "&nbsp;";
 	}
 	
 	if(messageObject.lbD != null){
@@ -191,7 +191,7 @@ function setPanelData(messageObject, messageFor){
 			panel8.innerHTML += playerRankData;
 		}
 	}	else{
-		panel8.innerHTML = "&nbsp;";
+		//panel8.innerHTML = "&nbsp;";
 	}
 
 }
